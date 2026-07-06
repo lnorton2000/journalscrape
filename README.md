@@ -14,26 +14,27 @@ future scraping but aren't polled yet.
   you don't get emailed the same article twice. Committed to git so state
   survives between runs.
 
-## One-time setup: Gmail App Password
+## One-time setup: Resend API key
 
-The script sends email through Gmail's SMTP server. This needs an **App
-Password**, not your normal Gmail password:
+The script emails through [Resend](https://resend.com)'s HTTPS API rather
+than Gmail SMTP, because this environment's network sandbox only allows
+outbound HTTPS — raw SMTP connections are blocked.
 
-1. Go to your Google Account → Security → turn on **2-Step Verification**
-   (required before app passwords are available).
-2. Go to https://myaccount.google.com/apppasswords, sign in, and create a new
-   app password (name it anything, e.g. "journalscrape").
-3. Google shows you a 16-character password — copy it.
+1. Sign up at https://resend.com using the email address you want the digest
+   sent to.
+2. In the dashboard, go to **API Keys** → **Create API Key**, and copy the
+   key (starts with `re_`).
+3. No domain verification needed: Resend's shared `onboarding@resend.dev`
+   sender can deliver to the address you signed up with.
 
 Then set these as environment variables on this Claude Code environment
 (see https://code.claude.com/docs/en/claude-code-on-the-web for how to add
 environment variables to an environment):
 
-- `GMAIL_ADDRESS` — your Gmail address (used to send, and as the default recipient)
-- `GMAIL_APP_PASSWORD` — the 16-character app password from step 3
-- `TO_EMAIL` — (optional) where the digest should go, if different from `GMAIL_ADDRESS`
+- `RESEND_API_KEY` — the API key from step 2
+- `TO_EMAIL` — the address you signed up to Resend with
 
-Do not commit these values to git or paste the app password into chat.
+Do not commit these values to git or paste the API key into chat.
 
 ## Running manually
 
@@ -41,8 +42,8 @@ Do not commit these values to git or paste the app password into chat.
 python3 poll_journals.py
 ```
 
-If the Gmail env vars aren't set, it prints the digest to the console instead
-of emailing, so you can test it safely.
+If the env vars aren't set, it prints the digest to the console instead of
+emailing, so you can test it safely.
 
 ## Automatic daily run
 

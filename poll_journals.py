@@ -3,20 +3,20 @@
 
 Reads feed URLs from journals_config.json, compares against previously-seen
 article links in seen_state.json, and emails any new articles (title + link)
-via Gmail SMTP. Run this once per day (see README.md for scheduling setup).
+via the Resend HTTPS API. Run this once per day (see README.md for scheduling
+setup).
 
 Required environment variables:
-    GMAIL_ADDRESS       Gmail address to send from (also used as the default recipient)
-    GMAIL_APP_PASSWORD  Gmail App Password (not your normal password -- see README.md)
-    TO_EMAIL            (optional) recipient address, defaults to GMAIL_ADDRESS
+    RESEND_API_KEY  API key from resend.com (see README.md)
+    TO_EMAIL        Recipient address (must match the email you signed up to Resend with,
+                     until a sending domain is verified)
 """
 import json
 import os
-import smtplib
 import sys
 import xml.etree.ElementTree as ET
-from email.mime.text import MIMEText
 from pathlib import Path
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 BASE_DIR = Path(__file__).parent
@@ -86,12 +86,16 @@ def save_json(path, data):
 
 
 def send_digest_email(new_by_journal):
-    gmail_address = os.environ.get("GMAIL_ADDRESS")
-    gmail_password = os.environ.get("GMAIL_APP_PASSWORD")
-    to_email = os.environ.get("TO_EMAIL", gmail_address)
+    """Send the digest via Resend's HTTPS API.
 
-    if not gmail_address or not gmail_password:
-        print("GMAIL_ADDRESS / GMAIL_APP_PASSWORD not set -- skipping email, printing instead.")
+    Plain SMTP is blocked by this environment's network sandbox (only HTTPS
+    egress is allowed), so email goes through Resend's HTTP API instead.
+    """
+    api_key = os.environ.get("RESEND_API_KEY")
+    to_email = os.environ.get("TO_EMAIL")
+
+    if not api_key or not to_email:
+        print("RESEND_API_KEY / TO_EMAIL not set -- skipping email, printing instead.")
         print_digest(new_by_journal)
         return
 
@@ -104,15 +108,29 @@ def send_digest_email(new_by_journal):
         lines.append("")
     body = "\n".join(lines)
 
-    msg = MIMEText(body)
-    msg["Subject"] = f"Journal digest: {total} new article{'s' if total != 1 else ''}"
-    msg["From"] = gmail_address
-    msg["To"] = to_email
+    payload = json.dumps({
+        "from": "Journal Digest <onboarding@resend.dev>",
+        "to": [to_email],
+        "subject": f"Journal digest: {total} new article{'s' if total != 1 else ''}",
+        "text": body,
+    }).encode()
 
-    with smtplib.SMTP("smtp.gmail.com", 587) as server:
-        server.starttls()
-        server.login(gmail_address, gmail_password)
-        server.sendmail(gmail_address, [to_email], msg.as_string())
+    req = Request(
+        "https://api.resend.com/emails",
+        data=payload,
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": USER_AGENT,
+        },
+    )
+    try:
+        with urlopen(req, timeout=30) as resp:
+            resp.read()
+    except HTTPError as e:
+        print(f"Resend API error {e.code}: {e.read().decode()}", file=sys.stderr)
+        raise
     print(f"Emailed digest ({total} new articles) to {to_email}")
 
 
