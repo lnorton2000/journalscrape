@@ -1,0 +1,166 @@
+#!/usr/bin/env python3
+"""Poll journal RSS feeds for new articles and email a digest of any that are new.
+
+Reads feed URLs from journals_config.json, compares against previously-seen
+article links in seen_state.json, and emails any new articles (title + link)
+via Gmail SMTP. Run this once per day (see README.md for scheduling setup).
+
+Required environment variables:
+    GMAIL_ADDRESS       Gmail address to send from (also used as the default recipient)
+    GMAIL_APP_PASSWORD  Gmail App Password (not your normal password -- see README.md)
+    TO_EMAIL            (optional) recipient address, defaults to GMAIL_ADDRESS
+"""
+import json
+import os
+import smtplib
+import sys
+import xml.etree.ElementTree as ET
+from email.mime.text import MIMEText
+from pathlib import Path
+from urllib.request import Request, urlopen
+
+BASE_DIR = Path(__file__).parent
+CONFIG_PATH = BASE_DIR / "journals_config.json"
+STATE_PATH = BASE_DIR / "seen_state.json"
+
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+)
+
+def _local_tag(element):
+    """Strip the '{namespace}' prefix ElementTree adds to tag names."""
+    tag = element.tag
+    return tag.rsplit("}", 1)[-1] if "}" in tag else tag
+
+
+def _child_text(element, local_name):
+    for child in element:
+        if _local_tag(child) == local_name:
+            return (child.text or "").strip()
+    return ""
+
+
+def fetch_feed_items(url):
+    """Return a list of (title, link) tuples from an RSS 2.0, RSS 1.0/RDF, or Atom feed URL.
+
+    Matches elements by local tag name (ignoring namespace) since RSS 1.0/RDF
+    feeds (e.g. Taylor & Francis) declare a default namespace that ElementTree's
+    unqualified './/item' searches silently fail to match.
+    """
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=30) as resp:
+        data = resp.read()
+    root = ET.fromstring(data)
+
+    items = []
+    for element in root.iter():
+        local = _local_tag(element)
+        if local == "item":
+            title = _child_text(element, "title")
+            link = _child_text(element, "link")
+            if title and link:
+                items.append((title, link))
+        elif local == "entry":  # Atom
+            title = _child_text(element, "title")
+            link = ""
+            for child in element:
+                if _local_tag(child) == "link":
+                    link = child.get("href", "").strip()
+                    break
+            if title and link:
+                items.append((title, link))
+    return items
+
+
+def load_json(path, default):
+    if path.exists():
+        with open(path) as f:
+            return json.load(f)
+    return default
+
+
+def save_json(path, data):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2, sort_keys=True)
+
+
+def send_digest_email(new_by_journal):
+    gmail_address = os.environ.get("GMAIL_ADDRESS")
+    gmail_password = os.environ.get("GMAIL_APP_PASSWORD")
+    to_email = os.environ.get("TO_EMAIL", gmail_address)
+
+    if not gmail_address or not gmail_password:
+        print("GMAIL_ADDRESS / GMAIL_APP_PASSWORD not set -- skipping email, printing instead.")
+        print_digest(new_by_journal)
+        return
+
+    lines = []
+    total = sum(len(v) for v in new_by_journal.values())
+    for journal_name, articles in new_by_journal.items():
+        lines.append(f"{journal_name}")
+        for title, link in articles:
+            lines.append(f"  - {title}\n    {link}")
+        lines.append("")
+    body = "\n".join(lines)
+
+    msg = MIMEText(body)
+    msg["Subject"] = f"Journal digest: {total} new article{'s' if total != 1 else ''}"
+    msg["From"] = gmail_address
+    msg["To"] = to_email
+
+    with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        server.starttls()
+        server.login(gmail_address, gmail_password)
+        server.sendmail(gmail_address, [to_email], msg.as_string())
+    print(f"Emailed digest ({total} new articles) to {to_email}")
+
+
+def print_digest(new_by_journal):
+    for journal_name, articles in new_by_journal.items():
+        print(f"\n{journal_name}")
+        for title, link in articles:
+            print(f"  - {title}\n    {link}")
+
+
+def main():
+    config = load_json(CONFIG_PATH, {"journals": []})
+    state = load_json(STATE_PATH, {})
+
+    new_by_journal = {}
+    errors = []
+
+    for journal in config["journals"]:
+        feed_url = journal.get("feed_url")
+        if not feed_url:
+            continue
+        name = journal["name"]
+        seen_links = set(state.get(name, []))
+
+        try:
+            items = fetch_feed_items(feed_url)
+        except Exception as e:
+            errors.append(f"{name}: {e}")
+            continue
+
+        new_items = [(title, link) for title, link in items if link not in seen_links]
+        if new_items:
+            new_by_journal[name] = new_items
+
+        state[name] = list({link for _, link in items} | seen_links)
+
+    save_json(STATE_PATH, state)
+
+    if errors:
+        print("Errors fetching some feeds:", file=sys.stderr)
+        for e in errors:
+            print(f"  {e}", file=sys.stderr)
+
+    if new_by_journal:
+        send_digest_email(new_by_journal)
+    else:
+        print("No new articles.")
+
+
+if __name__ == "__main__":
+    main()

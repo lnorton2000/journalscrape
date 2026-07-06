@@ -159,10 +159,10 @@
       "name": "The China Quarterly",
       "publisher": "Cambridge University Press",
       "feed_url": "https://www.cambridge.org/core/rss/product/id/37A7B629381F092FD873F9979093ABFC",
-      "status": "likely",
-      "scrape_url": "https://www.cambridge.org/core/journals/china-quarterly",
-      "scrape_viability": "moderate",
-      "notes": "URL is explicitly present as a <link rel=\"alternate\"> RSS tag on the journal's Cambridge Core page, so it's correct, but Cambridge's bot protection returned 403/503 on every automated fetch attempt. Should work when requested from a real browser/normal user agent -- re-verify with an actual feed reader before relying on it."
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Confirmed working when fetched with a real browser User-Agent header (40 items parsed); Cambridge's bot protection had blocked the earlier automated-tool verification attempt but the URL itself is correct."
     },
     {
       "name": "Problems of Post-Communism",
