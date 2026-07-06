@@ -1,0 +1,240 @@
+{
+  "generated": "2026-07-06",
+  "notes": "Feed URLs were verified by direct HTTP fetch (curl with a browser User-Agent), not guessed. Taylor & Francis, Cambridge Core, and some other publisher platforms return HTTP 403 to naive/default HTTP clients and to automated browser-fetch tools that don't send a realistic User-Agent + headers -- when polling these feeds in production, set a normal desktop browser User-Agent string.",
+  "journals": [
+    {
+      "name": "Foreign Affairs",
+      "publisher": "Council on Foreign Relations",
+      "feed_url": "https://www.foreignaffairs.com/rss.xml",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Valid RSS, 21+ items, current pubDates."
+    },
+    {
+      "name": "Foreign Policy",
+      "publisher": "Graham Holdings / FP Group",
+      "feed_url": "https://foreignpolicy.com/feed/",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Standard WordPress RSS, ~28 items, current."
+    },
+    {
+      "name": "International Security",
+      "publisher": "MIT Press",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://direct.mit.edu/isec",
+      "scrape_viability": "hard",
+      "notes": "Silverchair platform returns 403 to all automated fetches (bot-protected, likely Akamai/PerimeterX). Guessed Silverchair RSS URL patterns all 404. Would need a real headless-browser session to scrape."
+    },
+    {
+      "name": "Texas National Security Review",
+      "publisher": "TNSR / Univ. of Texas",
+      "feed_url": "https://tnsr.org/feed/",
+      "status": "confirmed_unstable",
+      "scrape_url": "https://tnsr.org/",
+      "scrape_viability": "easy",
+      "notes": "URL is a real WordPress feed (first item parses correctly) but the site currently throws a server-side WordPress error partway through generation (HTTP 500, malformed XML after item 1). Likely transient -- retry periodically. Site itself is plain WordPress and easy to scrape as a fallback."
+    },
+    {
+      "name": "The Washington Quarterly",
+      "publisher": "Taylor & Francis (CSIS)",
+      "feed_url": "https://www.tandfonline.com/feed/rss/rwaq20",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "T&F journal code rwaq20. Valid RSS 1.0/RDF, current articles."
+    },
+    {
+      "name": "Survival",
+      "publisher": "Taylor & Francis (IISS)",
+      "feed_url": "https://www.tandfonline.com/feed/rss/tsur20",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "T&F journal code tsur20."
+    },
+    {
+      "name": "Journal of Strategic Studies",
+      "publisher": "Taylor & Francis",
+      "feed_url": "https://www.tandfonline.com/feed/rss/fjss20",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "T&F journal code fjss20."
+    },
+    {
+      "name": "Orbis",
+      "publisher": "Elsevier (FPRI)",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://www.sciencedirect.com/journal/orbis",
+      "scrape_viability": "hard",
+      "notes": "ScienceDirect is a heavy Angular SPA and returns 403 to automated fetches on all URLs tried. Would need a real browser session; still likely to be bot-blocked."
+    },
+    {
+      "name": "Parameters",
+      "publisher": "US Army War College",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://press.armywarcollege.edu/parameters/vol56/iss2/",
+      "scrape_viability": "easy",
+      "notes": "Bepress Digital Commons platform (same platform as Naval War College Review, which does have RSS) but no confirmed .rss variant for Parameters. Latest-issue page is static HTML with clean article links -- easy to scrape."
+    },
+    {
+      "name": "Joint Force Quarterly",
+      "publisher": "National Defense University Press",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://ndupress.ndu.edu/JFQ/",
+      "scrape_viability": "moderate",
+      "notes": "Custom NDU portal CMS, not WordPress; no feed markup found. Landing page branches to per-issue pages -- scrapeable but needs a two-step crawl (issue index, then article list)."
+    },
+    {
+      "name": "Naval War College Review",
+      "publisher": "US Naval War College",
+      "feed_url": "https://digital-commons.usnwc.edu/nwc-review/recent.rss",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Bepress Digital Commons RSS 2.0, 20+ items across recent issues."
+    },
+    {
+      "name": "Proceedings",
+      "publisher": "US Naval Institute (USNI)",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://www.usni.org/magazines/proceedings",
+      "scrape_viability": "hard",
+      "notes": "usni.org returns 403 to automated fetches; only feed found is news.usni.org/feed, which is USNI News (a different publication), not Proceedings. Magazine page appears JS-driven -- scraping viability unconfirmed, likely needs a headless browser."
+    },
+    {
+      "name": "Air & Space Power Journal",
+      "publisher": "Air University",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://www.airuniversity.af.edu/ASPJ/",
+      "scrape_viability": "easy",
+      "notes": "No RSS. Latest-issue listing is static HTML -- easy to scrape."
+    },
+    {
+      "name": "Strategic Studies Quarterly",
+      "publisher": "Air University",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://www.airuniversity.af.edu/SSQ/",
+      "scrape_viability": "easy",
+      "notes": "IMPORTANT: SSQ appears to be discontinued -- last issue is Vol. 15, No. 4 (Winter 2021). Its de facto successor is Aether: A Journal of Strategic Airpower & Spacepower (https://www.airuniversity.af.edu/AetherJournal/), which also has no RSS feed and is PDF-heavy (harder to scrape than SSQ's old HTML archive)."
+    },
+    {
+      "name": "Journal of Strategic Competition",
+      "publisher": "Irregular Warfare Initiative",
+      "feed_url": "https://strategiccompetition.org/index.php/josc/gateway/plugin/WebFeedGatewayPlugin/rss2",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Valid OJS RSS2 feed, 9 items. NOTE: this is a distinct, newly launched (Jan 2025) journal from the Irregular Warfare Initiative at strategiccompetition.org -- it is not affiliated with Air University/SSQ. If the intended journal was a different 'Journal of Strategic Competition,' re-verify which publication was meant."
+    },
+    {
+      "name": "China Leadership Monitor",
+      "publisher": "Hoover Institution",
+      "feed_url": "https://www.prcleader.org/blog-feed.xml",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "20 items with full titles/authors/dates, latest May 2026."
+    },
+    {
+      "name": "Asia Policy",
+      "publisher": "National Bureau of Asian Research (NBR)",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://www.nbr.org/publication/",
+      "scrape_viability": "hard",
+      "notes": "nbr.org blocks automated fetches (403) on journal pages. Site-wide nbr.org/feed/ returns HTTP 200 but is empty (0 items, unused). Latest-issue page needs a real browser session; JS-rendering unconfirmed."
+    },
+    {
+      "name": "The China Quarterly",
+      "publisher": "Cambridge University Press",
+      "feed_url": "https://www.cambridge.org/core/rss/product/id/37A7B629381F092FD873F9979093ABFC",
+      "status": "likely",
+      "scrape_url": "https://www.cambridge.org/core/journals/china-quarterly",
+      "scrape_viability": "moderate",
+      "notes": "URL is explicitly present as a <link rel=\"alternate\"> RSS tag on the journal's Cambridge Core page, so it's correct, but Cambridge's bot protection returned 403/503 on every automated fetch attempt. Should work when requested from a real browser/normal user agent -- re-verify with an actual feed reader before relying on it."
+    },
+    {
+      "name": "Problems of Post-Communism",
+      "publisher": "Taylor & Francis",
+      "feed_url": "https://www.tandfonline.com/feed/rss/mppc20",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "T&F journal code mppc20."
+    },
+    {
+      "name": "Russian Politics",
+      "publisher": "Brill",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://brill.com/view/journals/rupo/rupo-overview.xml",
+      "scrape_viability": "easy",
+      "notes": "Despite the .xml extension, this URL is not RSS -- it's Brill's normal table-of-contents page rendered as server-side HTML (490KB, contains real issue/volume/article links), so it's directly scrapeable. Brill's only real feed is a site-wide /newsrss (all Brill news, not journal-specific)."
+    },
+    {
+      "name": "Journal of Slavic Military Studies",
+      "publisher": "Taylor & Francis",
+      "feed_url": "https://www.tandfonline.com/feed/rss/fslv20",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "T&F journal code fslv20."
+    },
+    {
+      "name": "Studies in Intelligence",
+      "publisher": "CIA / Center for the Study of Intelligence",
+      "feed_url": null,
+      "status": "no_feed_found",
+      "scrape_url": "https://www.cia.gov/resources/csi/studies-in-intelligence/",
+      "scrape_viability": "easy",
+      "notes": "No feed. Latest-issue page is a static HTML listing linking to per-article pages with separate PDFs -- easy to scrape."
+    },
+    {
+      "name": "International Journal of Intelligence and CounterIntelligence",
+      "publisher": "Taylor & Francis",
+      "feed_url": "https://www.tandfonline.com/feed/rss/ujic20",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "T&F journal code ujic20."
+    },
+    {
+      "name": "Intelligence and National Security",
+      "publisher": "Taylor & Francis",
+      "feed_url": "https://www.tandfonline.com/feed/rss/fint20",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "T&F journal code fint20."
+    },
+    {
+      "name": "The Nonproliferation Review",
+      "publisher": "Taylor & Francis",
+      "feed_url": "https://www.tandfonline.com/feed/rss/rnpr20",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "T&F journal code rnpr20."
+    },
+    {
+      "name": "Small Wars & Insurgencies",
+      "publisher": "Taylor & Francis",
+      "feed_url": "https://www.tandfonline.com/feed/rss/fswi20",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "T&F journal code fswi20."
+    }
+  ]
+}
