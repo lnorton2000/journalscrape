@@ -195,10 +195,11 @@
       "name": "Studies in Intelligence",
       "publisher": "CIA / Center for the Study of Intelligence",
       "feed_url": null,
-      "status": "no_feed_found",
+      "status": "confirmed",
       "scrape_url": "https://www.cia.gov/resources/csi/studies-in-intelligence/",
+      "scrape_type": "cia_studies_in_intelligence",
       "scrape_viability": "easy",
-      "notes": "No feed. Latest-issue page is a static HTML listing linking to per-article pages with separate PDFs -- easy to scrape."
+      "notes": "No RSS feed, but scraped directly: the index page links to one page per issue, and each issue page lists articles as plain <a class=\"link-button bold\"> tags -- stable enough to parse with a small regex scraper (see poll_journals.py: scrape_cia_studies_in_intelligence)."
     },
     {
       "name": "International Journal of Intelligence and CounterIntelligence",

@@ -13,10 +13,12 @@ Required environment variables:
 """
 import json
 import os
+import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.error import HTTPError
+from urllib.parse import urljoin
 from urllib.request import Request, urlopen
 
 BASE_DIR = Path(__file__).parent
@@ -71,6 +73,41 @@ def fetch_feed_items(url):
             if title and link:
                 items.append((title, link))
     return items
+
+
+def fetch_html(url):
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=30) as resp:
+        return resp.read().decode("utf-8", errors="replace")
+
+
+def scrape_cia_studies_in_intelligence(index_url):
+    """Return (title, link) tuples for every article across all listed issues.
+
+    No RSS feed exists for this journal. The index page links to one page per
+    issue; each issue page lists its articles as plain <a class="link-button
+    bold" href="...">Title</a> tags, which is stable enough to scrape directly.
+    """
+    html = fetch_html(index_url)
+    issue_paths = sorted(set(re.findall(
+        r'href="(/resources/csi/studies-in-intelligence/studies-in-intelligence-vol-[^"]+/)"',
+        html,
+    )))
+
+    items = []
+    for path in issue_paths:
+        issue_url = urljoin(index_url, path)
+        issue_html = fetch_html(issue_url)
+        for link, title in re.findall(
+            r'<a class="link-button bold" href="([^"]+)">([^<]+)</a>', issue_html
+        ):
+            items.append((title.strip(), urljoin(issue_url, link)))
+    return items
+
+
+SCRAPERS = {
+    "cia_studies_in_intelligence": scrape_cia_studies_in_intelligence,
+}
 
 
 def load_json(path, default):
@@ -150,13 +187,17 @@ def main():
 
     for journal in config["journals"]:
         feed_url = journal.get("feed_url")
-        if not feed_url:
+        scrape_type = journal.get("scrape_type")
+        if not feed_url and not scrape_type:
             continue
         name = journal["name"]
         seen_links = set(state.get(name, []))
 
         try:
-            items = fetch_feed_items(feed_url)
+            if feed_url:
+                items = fetch_feed_items(feed_url)
+            else:
+                items = SCRAPERS[scrape_type](journal["scrape_url"])
         except Exception as e:
             errors.append(f"{name}: {e}")
             continue
