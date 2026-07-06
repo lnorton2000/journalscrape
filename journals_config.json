@@ -3,6 +3,24 @@
   "notes": "Feed URLs were verified by direct HTTP fetch (curl with a browser User-Agent), not guessed. Taylor & Francis, Cambridge Core, and some other publisher platforms return HTTP 403 to naive/default HTTP clients and to automated browser-fetch tools that don't send a realistic User-Agent + headers -- when polling these feeds in production, set a normal desktop browser User-Agent string.",
   "journals": [
     {
+      "name": "Small Wars Journal",
+      "publisher": "Small Wars Journal",
+      "feed_url": "https://smallwarsjournal.com/feed/",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Standard WordPress RSS."
+    },
+    {
+      "name": "CSIS",
+      "publisher": "Center for Strategic and International Studies",
+      "feed_url": "https://www.csis.org/rss.xml",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Confirmed working; note this is CSIS's site-wide feed (all publications/commentary), not a single narrow journal."
+    },
+    {
       "name": "War on the Rocks",
       "publisher": "War on the Rocks",
       "feed_url": "https://warontherocks.com/feed/",
@@ -104,11 +122,11 @@
     {
       "name": "Parameters",
       "publisher": "US Army War College",
-      "feed_url": null,
-      "status": "no_feed_found",
-      "scrape_url": "https://press.armywarcollege.edu/parameters/vol56/iss2/",
-      "scrape_viability": "easy",
-      "notes": "Bepress Digital Commons platform (same platform as Naval War College Review, which does have RSS) but no confirmed .rss variant for Parameters. Latest-issue page is static HTML with clean article links -- easy to scrape."
+      "feed_url": "https://press.armywarcollege.edu/parameters/recent.rss",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Bepress Digital Commons recent.rss feed (same pattern as Naval War College Review), confirmed working."
     },
     {
       "name": "Joint Force Quarterly",
@@ -116,8 +134,8 @@
       "feed_url": null,
       "status": "no_feed_found",
       "scrape_url": "https://ndupress.ndu.edu/JFQ/",
-      "scrape_viability": "moderate",
-      "notes": "Custom NDU portal CMS, not WordPress; no feed markup found. Landing page branches to per-issue pages -- scrapeable but needs a two-step crawl (issue index, then article list)."
+      "scrape_viability": "hard",
+      "notes": "Custom NDU portal CMS, not WordPress; no feed markup found, and the site now returns HTTP 403 to automated requests even on the base landing page (bot-blocked), so scraping isn't currently viable either."
     },
     {
       "name": "Naval War College Review",
