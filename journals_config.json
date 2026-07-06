@@ -3,6 +3,33 @@
   "notes": "Feed URLs were verified by direct HTTP fetch (curl with a browser User-Agent), not guessed. Taylor & Francis, Cambridge Core, and some other publisher platforms return HTTP 403 to naive/default HTTP clients and to automated browser-fetch tools that don't send a realistic User-Agent + headers -- when polling these feeds in production, set a normal desktop browser User-Agent string.",
   "journals": [
     {
+      "name": "War on the Rocks",
+      "publisher": "War on the Rocks",
+      "feed_url": "https://warontherocks.com/feed/",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Standard WordPress RSS."
+    },
+    {
+      "name": "Modern War Institute",
+      "publisher": "Modern War Institute at West Point",
+      "feed_url": "https://mwi.westpoint.edu/feed/",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Standard WordPress RSS."
+    },
+    {
+      "name": "Irregular Warfare Initiative",
+      "publisher": "Irregular Warfare Initiative",
+      "feed_url": "https://www.irregularwarfare.org/rss/",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "The obvious /feed/ path 301-redirects to /rss/, which is the real feed; includes both articles and podcast episodes."
+    },
+    {
       "name": "Foreign Affairs",
       "publisher": "Council on Foreign Relations",
       "feed_url": "https://www.foreignaffairs.com/rss.xml",
