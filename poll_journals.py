@@ -14,6 +14,7 @@ Required environment variables:
 import json
 import os
 import re
+import subprocess
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -171,6 +172,35 @@ def send_digest_email(new_by_journal):
     print(f"Emailed digest ({total} new articles) to {to_email}")
 
 
+def commit_and_push_state():
+    """Persist seen_state.json to git immediately after computing it.
+
+    This runs inside the poller itself (rather than being a separate step an
+    automated caller has to remember) because a scheduled run that emails a
+    digest but fails to push the updated state causes the *same* articles to
+    be re-flagged as new -- and re-emailed -- the next time it runs from a
+    fresh checkout.
+    """
+    def run(*args):
+        return subprocess.run(
+            ["git", *args], cwd=BASE_DIR, capture_output=True, text=True
+        )
+
+    diff = run("status", "--porcelain", "--", "seen_state.json")
+    if diff.returncode != 0 or not diff.stdout.strip():
+        return
+
+    for args in (
+        ("add", "seen_state.json"),
+        ("commit", "-m", "Update seen article state"),
+        ("push", "origin", "HEAD"),
+    ):
+        result = run(*args)
+        if result.returncode != 0:
+            print(f"git {' '.join(args)} failed: {result.stderr.strip()}", file=sys.stderr)
+            return
+
+
 def print_digest(new_by_journal):
     for journal_name, articles in new_by_journal.items():
         print(f"\n{journal_name}")
@@ -209,6 +239,7 @@ def main():
         state[name] = list({link for _, link in items} | seen_links)
 
     save_json(STATE_PATH, state)
+    commit_and_push_state()
 
     if errors:
         print("Errors fetching some feeds:", file=sys.stderr)
