@@ -272,7 +272,7 @@ def main():
         if new_items:
             new_by_journal[name] = new_items
 
-        state[name] = list({link for _, link in items} | seen_links)
+        state[name] = sorted({link for _, link in items} | seen_links)
 
     save_json(STATE_PATH, state)
     persisted, persist_log = commit_and_push_state()
