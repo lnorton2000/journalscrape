@@ -123,21 +123,30 @@ def save_json(path, data):
         json.dump(data, f, indent=2, sort_keys=True)
 
 
-def send_digest_email(new_by_journal):
+def send_digest_email(new_by_journal, warning=None):
     """Send the digest via Resend's HTTPS API.
 
     Plain SMTP is blocked by this environment's network sandbox (only HTTPS
     egress is allowed), so email goes through Resend's HTTP API instead.
+
+    `warning`, if set, is prepended to the email body and flagged in the
+    subject -- used to surface a state-persistence failure directly to the
+    user, since that failure must never be silent (see commit_and_push_state).
     """
     api_key = os.environ.get("RESEND_API_KEY")
     to_email = os.environ.get("TO_EMAIL")
 
     if not api_key or not to_email:
         print("RESEND_API_KEY / TO_EMAIL not set -- skipping email, printing instead.")
+        if warning:
+            print(warning)
         print_digest(new_by_journal)
         return
 
     lines = []
+    if warning:
+        lines.append(warning)
+        lines.append("")
     total = sum(len(v) for v in new_by_journal.values())
     for journal_name, articles in new_by_journal.items():
         lines.append(f"{journal_name}")
@@ -146,10 +155,14 @@ def send_digest_email(new_by_journal):
         lines.append("")
     body = "\n".join(lines)
 
+    subject = f"Journal digest: {total} new article{'s' if total != 1 else ''}"
+    if warning:
+        subject = "[ACTION NEEDED] " + subject
+
     payload = json.dumps({
         "from": "Journal Digest <onboarding@resend.dev>",
         "to": [to_email],
-        "subject": f"Journal digest: {total} new article{'s' if total != 1 else ''}",
+        "subject": subject,
         "text": body,
     }).encode()
 
@@ -175,27 +188,36 @@ def send_digest_email(new_by_journal):
 def commit_and_push_state():
     """Persist seen_state.json to git immediately after computing it.
 
-    This runs inside the poller itself (rather than being a separate step an
-    automated caller has to remember) because a scheduled run that emails a
+    Returns (success, log) -- log is the full transcript of every command run,
+    so a caller can surface it (e.g. embed in the email) rather than relying on
+    stderr being noticed. This must never fail silently: a run that emails a
     digest but fails to push the updated state causes the *same* articles to
     be re-flagged as new -- and re-emailed -- the next time it runs from a
-    fresh checkout.
+    fresh checkout, which is exactly the bug this is guarding against.
 
-    Commit signing is explicitly disabled for this one commit: this file is a
-    bot-maintained tracking file, not authored code, and the environment's
-    commit-signing helper is tied to session-specific infrastructure that may
-    not be reliably available in a headless/automated session -- a failure
-    here must not silently break state persistence.
+    Commit signing is explicitly disabled for this one commit (it's a
+    bot-maintained tracking file, not authored code) since the environment's
+    commit-signing helper may not be reliably available in a headless/
+    automated session. Local git identity is also set explicitly in case a
+    fresh clone has no user.name/user.email configured at all.
     """
+    log_lines = []
+
     def run(*args):
-        return subprocess.run(
+        result = subprocess.run(
             ["git", *args], cwd=BASE_DIR, capture_output=True, text=True
         )
+        log_lines.append(f"$ git {' '.join(args)}\n{result.stdout}{result.stderr}".rstrip())
+        return result
 
     diff = run("status", "--porcelain", "--", "seen_state.json")
     if diff.returncode != 0 or not diff.stdout.strip():
-        print("commit_and_push_state: no changes to seen_state.json, nothing to persist.")
-        return
+        log_lines.append("No changes to seen_state.json, nothing to persist.")
+        print("\n".join(log_lines))
+        return True, "\n".join(log_lines)
+
+    run("config", "user.email", "journalscrape-bot@localhost")
+    run("config", "user.name", "journalscrape-bot")
 
     steps = (
         ("add", "seen_state.json"),
@@ -204,15 +226,15 @@ def commit_and_push_state():
     )
     for args in steps:
         result = run(*args)
-        print(f"$ git {' '.join(args)}\n{result.stdout}{result.stderr}".rstrip())
         if result.returncode != 0:
-            print(
-                "!!! FAILED TO PERSIST seen_state.json -- today's digest will repeat "
-                "tomorrow unless this is fixed. See git output above.",
-                file=sys.stderr,
-            )
-            return
-    print("commit_and_push_state: pushed successfully.")
+            run("remote", "-v")
+            log = "\n".join(log_lines)
+            print(log, file=sys.stderr)
+            return False, log
+
+    log = "\n".join(log_lines)
+    print(log)
+    return True, log
 
 
 def print_digest(new_by_journal):
@@ -253,15 +275,24 @@ def main():
         state[name] = list({link for _, link in items} | seen_links)
 
     save_json(STATE_PATH, state)
-    commit_and_push_state()
+    persisted, persist_log = commit_and_push_state()
 
     if errors:
         print("Errors fetching some feeds:", file=sys.stderr)
         for e in errors:
             print(f"  {e}", file=sys.stderr)
 
-    if new_by_journal:
-        send_digest_email(new_by_journal)
+    warning = None
+    if not persisted:
+        warning = (
+            "WARNING: failed to save today's article state to git. This means "
+            "today's new articles below (if any) will likely be re-sent as "
+            "'new' again tomorrow, until this is fixed. Diagnostic output:\n\n"
+            + persist_log
+        )
+
+    if new_by_journal or warning:
+        send_digest_email(new_by_journal, warning=warning)
     else:
         print("No new articles.")
 
