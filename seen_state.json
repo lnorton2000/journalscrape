@@ -38,6 +38,7 @@
     "https://www.foreignaffairs.com/americas/trump-remaking-latin-america",
     "https://www.foreignaffairs.com/arctic-antarctic/dangerous-game-arctic",
     "https://www.foreignaffairs.com/china/china-sabotaging-world-enables-its-rise",
+    "https://www.foreignaffairs.com/china/chinas-moment-weakness",
     "https://www.foreignaffairs.com/china/coming-clash-between-china-and-europe",
     "https://www.foreignaffairs.com/china/extreme-weather-will-upend-us-china-competition",
     "https://www.foreignaffairs.com/china/gulfs-china-problem",
@@ -74,6 +75,7 @@
     "https://www.foreignaffairs.com/united-states/lost-art-coercion",
     "https://www.foreignaffairs.com/united-states/military-and-republic-charles-q-brown",
     "https://www.foreignaffairs.com/united-states/nato-transatlantic-alliance-cant-survive-without-trust",
+    "https://www.foreignaffairs.com/united-states/small-suffer-what-they-must",
     "https://www.foreignaffairs.com/united-states/strong-do-what-they-can-and-suffer-what-they-must",
     "https://www.foreignaffairs.com/united-states/survive-artificial-intelligence-shock-davidson-slaughter",
     "https://www.foreignaffairs.com/united-states/ukraine-lesson-taiwan-keeps-missing",
@@ -180,7 +182,17 @@
     "https://foreignpolicy.com/2026/07/21/russia-myths-great-power-putin-war-ukraine/",
     "https://foreignpolicy.com/2026/07/21/trump-end-iran-war-history/",
     "https://foreignpolicy.com/2026/07/21/trump-tariffs-canada-section-338-mexico-brazil-trade-usmca/",
-    "https://foreignpolicy.com/2026/07/22/shanghai-ai-artificial-intelligence-conference-southeast-asia/"
+    "https://foreignpolicy.com/2026/07/22/congo-ebola-outbreak-global-health-response-epidemic-who/",
+    "https://foreignpolicy.com/2026/07/22/india-cockroach-protest-movement-youth-modi-bjp-education/",
+    "https://foreignpolicy.com/2026/07/22/shanghai-ai-artificial-intelligence-conference-southeast-asia/",
+    "https://foreignpolicy.com/2026/07/22/trump-epic-fury-iran-war-hormuz-oil-energy-price/",
+    "https://foreignpolicy.com/2026/07/22/trump-nuclear-deal-saudi-arabia-uranium-enrichment-gold-standard/",
+    "https://foreignpolicy.com/2026/07/22/yemen-houthis-sanaa-saudi-arabia-red-sea-hormuz-iran/",
+    "https://foreignpolicy.com/2026/07/23/beijing-china-united-states-pew-public-opinion-soft-power/",
+    "https://foreignpolicy.com/2026/07/23/china-corruption-ma-xingrui/",
+    "https://foreignpolicy.com/2026/07/23/falklands-britain-argentina-islands-world-cup-malvinas-territory-sovereignty-colonialism/",
+    "https://foreignpolicy.com/2026/07/23/iran-united-states-trump-hormuz-war-nuclear/",
+    "https://foreignpolicy.com/2026/07/23/trump-us-saudi-nuclear-deal-weapons-iran-israel-arms-race/"
   ],
   "Intelligence and National Security": [
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2016.1199528?af=R",
@@ -256,7 +268,8 @@
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2692801?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2692846?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2695069?af=R",
-    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2698892?af=R"
+    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2698892?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2700382?af=R"
   ],
   "International Journal of Intelligence and CounterIntelligence": [
     "https://www.tandfonline.com/doi/full/10.1080/08850607.2024.2442397?af=R",
@@ -422,6 +435,7 @@
   "Modern War Institute": [
     "https://mwi.westpoint.edu/build-at-scale-innovate-at-the-edge-close-the-feedback-loop-fast-transforming-acquisition-for-the-drone-age/",
     "https://mwi.westpoint.edu/five-questions-for-a-general-brigadier-general-sean-crockett/",
+    "https://mwi.westpoint.edu/five-questions-for-a-general-major-general-wolfe-davidson/",
     "https://mwi.westpoint.edu/function-before-structure-why-do-brigades-exist/",
     "https://mwi.westpoint.edu/if-adaptability-is-our-competitive-advantage-why-dont-we-invest-in-it/",
     "https://mwi.westpoint.edu/into-the-deep-special-forces-and-the-future-of-large-scale-combat/",
@@ -712,7 +726,12 @@
     "https://smallwarsjournal.com/2026/07/21/three-lives-of-clausewitz-on-war/",
     "https://smallwarsjournal.com/2026/07/22/intelligence-support-to-over-the-horizon-targeting-in-contested-environments/",
     "https://smallwarsjournal.com/2026/07/22/rethinking-landpower-first-island-chain/",
-    "https://smallwarsjournal.com/2026/07/22/the-f-16-flies-with-ai-stars-and-stripes/"
+    "https://smallwarsjournal.com/2026/07/22/the-f-16-flies-with-ai-stars-and-stripes/",
+    "https://smallwarsjournal.com/2026/07/23/7-22-26-national-security-and-korean-news-and-commentary/",
+    "https://smallwarsjournal.com/2026/07/23/american-public-sours-to-iran-war-much-faster-than-vietnam-did-economist-yougov-poll/",
+    "https://smallwarsjournal.com/2026/07/23/dr-bruce-hoffman-on-50-years-of-terrorism-studies/",
+    "https://smallwarsjournal.com/2026/07/23/gas-from-above-uavs-bringing-chemical-warfare-back-in-ukraine/",
+    "https://smallwarsjournal.com/2026/07/23/the-strategic-messages-of-operation-epic-fury/"
   ],
   "Studies in Intelligence": [
     "https://www.cia.gov/resources/csi/studies-in-intelligence/studies-in-intelligence-vol-69-no-3-extracts-september-2025/applying-epistemology-to-analysis-making-the-case-for-abductive-reasoning/",
@@ -872,6 +891,7 @@
     "https://warontherocks.com/cascading-failure-the-spanish-navys-reserve-squadron-and-the-tragedy-of-unpreparedness/",
     "https://warontherocks.com/chinas-farm-drones-a-trojan-horse-washington-overlooks/",
     "https://warontherocks.com/cogs-of-war/ai-agents-and-the-unseen-work-of-war/",
+    "https://warontherocks.com/cogs-of-war/america-needs-an-off-ramp-between-doing-nothing-and-shutting-ai-down/",
     "https://warontherocks.com/cogs-of-war/at-a-glance-american-quadcopter-component-manufacturing/",
     "https://warontherocks.com/cogs-of-war/before-q-day-the-race-to-quantum-first/",
     "https://warontherocks.com/cogs-of-war/chinas-ai-governance-offensive-threatens-u-s-tech-leadership/",
@@ -892,6 +912,7 @@
     "https://warontherocks.com/cogs-of-war/the-davis-wing-the-b-24-liberator-and-the-self-made-bet-that-paid-off/",
     "https://warontherocks.com/cogs-of-war/the-defense-industrial-alliance-washington-is-throwing-away/",
     "https://warontherocks.com/cogs-of-war/the-integrated-circuit-and-the-future-of-ai-leadership/",
+    "https://warontherocks.com/cogs-of-war/the-king-of-cool-mobile-refrigeration-and-the-remaking-of-global-logistics/",
     "https://warontherocks.com/cogs-of-war/the-lawmakers-fighting-to-modernize-the-pentagon/",
     "https://warontherocks.com/cogs-of-war/the-pentagons-ai-edge-is-being-distilled-away/",
     "https://warontherocks.com/cogs-of-war/the-pentagons-ai-strategy-has-a-funding-problem/",
@@ -952,6 +973,7 @@
     "https://warontherocks.com/the-gulf-arab-states-need-a-shield-built-for-limited-trust/",
     "https://warontherocks.com/the-hizballah-predicament-why-an-integrated-approach-is-necessary/",
     "https://warontherocks.com/the-importance-of-the-battle-of-the-little-bighorn/",
+    "https://warontherocks.com/the-importance-of-the-invasion-of-sicily/",
     "https://warontherocks.com/the-kid-rock-flyby-controversy-and-the-erosion-of-military-professionalism/",
     "https://warontherocks.com/the-lessons-of-sacrifice/",
     "https://warontherocks.com/the-make-or-buy-line-has-moved/",
