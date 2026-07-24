@@ -67,11 +67,13 @@
     "https://www.foreignaffairs.com/ukraine/how-save-irrelevance",
     "https://www.foreignaffairs.com/united-kingdom/new-prime-minister-same-problem",
     "https://www.foreignaffairs.com/united-states/america-and-irans-strange-moment-opportunity",
+    "https://www.foreignaffairs.com/united-states/america-still-has-upper-hand-over-china",
     "https://www.foreignaffairs.com/united-states/americas-trillion-dollar-failure-ro-khanna",
     "https://www.foreignaffairs.com/united-states/autocrats-worst-enemy",
     "https://www.foreignaffairs.com/united-states/better-way-build-ai",
     "https://www.foreignaffairs.com/united-states/broken-nuclear-umbrella-lind-press",
     "https://www.foreignaffairs.com/united-states/how-win-defense-innovation-contest",
+    "https://www.foreignaffairs.com/united-states/iran-and-new-rules-global-power",
     "https://www.foreignaffairs.com/united-states/lost-art-coercion",
     "https://www.foreignaffairs.com/united-states/military-and-republic-charles-q-brown",
     "https://www.foreignaffairs.com/united-states/nato-transatlantic-alliance-cant-survive-without-trust",
@@ -189,9 +191,14 @@
     "https://foreignpolicy.com/2026/07/22/trump-nuclear-deal-saudi-arabia-uranium-enrichment-gold-standard/",
     "https://foreignpolicy.com/2026/07/22/yemen-houthis-sanaa-saudi-arabia-red-sea-hormuz-iran/",
     "https://foreignpolicy.com/2026/07/23/beijing-china-united-states-pew-public-opinion-soft-power/",
+    "https://foreignpolicy.com/2026/07/23/china-ai-race-moonshot-kimi-k3-alibaba-qwen-deepseek-openai-anthropic/",
     "https://foreignpolicy.com/2026/07/23/china-corruption-ma-xingrui/",
+    "https://foreignpolicy.com/2026/07/23/cuba-trump-venezuela-iran-ukraine/",
     "https://foreignpolicy.com/2026/07/23/falklands-britain-argentina-islands-world-cup-malvinas-territory-sovereignty-colonialism/",
+    "https://foreignpolicy.com/2026/07/23/houthi-rebels-saudi-arabia-shipping-red-sea-iran-war/",
     "https://foreignpolicy.com/2026/07/23/iran-united-states-trump-hormuz-war-nuclear/",
+    "https://foreignpolicy.com/2026/07/23/iran-us-israel-war-hormuz-trump-options/",
+    "https://foreignpolicy.com/2026/07/23/odyssey-civilization-collapse-history/",
     "https://foreignpolicy.com/2026/07/23/trump-us-saudi-nuclear-deal-weapons-iran-israel-arms-race/"
   ],
   "Intelligence and National Security": [
@@ -369,6 +376,7 @@
     "https://www.irregularwarfare.org/iw-weekly-21-june-2026/",
     "https://www.irregularwarfare.org/iw-weekly-28-june-2026/",
     "https://www.irregularwarfare.org/iwis-summer-2026-reading-list/",
+    "https://www.irregularwarfare.org/kurdish-underground-resistance-and-civil-disobedience-against-the-iranian-security-state/",
     "https://www.irregularwarfare.org/maritime-autonomous-systems-featuring-ukraines-sbu/",
     "https://www.irregularwarfare.org/ordinary-crime-hybrid-threat-or-irregular-warfare/",
     "https://www.irregularwarfare.org/protocol-insurgency-winning-the-war-of-conditions-in-the-digital-age/",
@@ -387,6 +395,7 @@
     "https://www.tandfonline.com/doi/full/10.1080/13518046.2026.2672272?af=R"
   ],
   "Journal of Strategic Competition": [
+    "https://strategiccompetition.org/index.php/josc/article/view/11",
     "https://strategiccompetition.org/index.php/josc/article/view/12",
     "https://strategiccompetition.org/index.php/josc/article/view/14",
     "https://strategiccompetition.org/index.php/josc/article/view/15",
@@ -430,6 +439,7 @@
     "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2668456?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2671864?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2696225?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2698135?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2698659?af=R"
   ],
   "Modern War Institute": [
@@ -677,7 +687,9 @@
     "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2696524?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2697914?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2700315?af=R",
-    "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2704772?af=R"
+    "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2704772?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2708022?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2708041?af=R"
   ],
   "Small Wars Journal": [
     "https://smallwarsjournal.com/2026/07/03/7-3-26-national-security-and-korean-news-and-commentary/",
@@ -728,10 +740,18 @@
     "https://smallwarsjournal.com/2026/07/22/rethinking-landpower-first-island-chain/",
     "https://smallwarsjournal.com/2026/07/22/the-f-16-flies-with-ai-stars-and-stripes/",
     "https://smallwarsjournal.com/2026/07/23/7-22-26-national-security-and-korean-news-and-commentary/",
+    "https://smallwarsjournal.com/2026/07/23/7-23-26-national-security-and-korean-news-and-commentary/",
     "https://smallwarsjournal.com/2026/07/23/american-public-sours-to-iran-war-much-faster-than-vietnam-did-economist-yougov-poll/",
     "https://smallwarsjournal.com/2026/07/23/dr-bruce-hoffman-on-50-years-of-terrorism-studies/",
     "https://smallwarsjournal.com/2026/07/23/gas-from-above-uavs-bringing-chemical-warfare-back-in-ukraine/",
-    "https://smallwarsjournal.com/2026/07/23/the-strategic-messages-of-operation-epic-fury/"
+    "https://smallwarsjournal.com/2026/07/23/the-strategic-messages-of-operation-epic-fury/",
+    "https://smallwarsjournal.com/2026/07/24/algorithmic-giants-ethical-infants/",
+    "https://smallwarsjournal.com/2026/07/24/attritability-of-unmanned-vehicular-systems/",
+    "https://smallwarsjournal.com/2026/07/24/institute-for-national-strategic-studies-at-the-national-defense-university-launches-new-monthly-brief/",
+    "https://smallwarsjournal.com/2026/07/24/is-china-a-peaked-power-and-so-what-if-it-is/",
+    "https://smallwarsjournal.com/2026/07/24/nato-cogwar-newsletter-perception-july-2026-issue-11/",
+    "https://smallwarsjournal.com/2026/07/24/small-wars-journal-el-centro-senior-fellow-designs-software-with-computer-science-student-to-fight-terrorism-and-crime-networks/",
+    "https://smallwarsjournal.com/2026/07/24/uts-and-the-human-domain/"
   ],
   "Studies in Intelligence": [
     "https://www.cia.gov/resources/csi/studies-in-intelligence/studies-in-intelligence-vol-69-no-3-extracts-september-2025/applying-epistemology-to-analysis-making-the-case-for-abductive-reasoning/",
@@ -881,6 +901,7 @@
     "https://warontherocks.com/an-inconvenient-reality-climate-preparedness-cuts-are-lethality-cuts/",
     "https://warontherocks.com/an-unlearned-lesson-the-sorry-record-of-regime-change-operations-in-the-middle-east/",
     "https://warontherocks.com/asian-reactions-to-trumps-summit-with-xi/",
+    "https://warontherocks.com/before-a-cyber-force-fix-cyber-governance/",
     "https://warontherocks.com/before-the-next-mythos-moment-the-case-for-an-ai-threat-fusion-center/",
     "https://warontherocks.com/between-beijing-and-the-budget-the-domestic-realities-of-taiwans-defense-spending-drama/",
     "https://warontherocks.com/big-promises-bigger-blind-spots-for-ukraines-security/",
@@ -889,6 +910,7 @@
     "https://warontherocks.com/building-a-better-ukraine-requires-accessibility-reforms/",
     "https://warontherocks.com/can-bankova-muster-political-will-to-make-institutional-reforms-during-war/",
     "https://warontherocks.com/cascading-failure-the-spanish-navys-reserve-squadron-and-the-tragedy-of-unpreparedness/",
+    "https://warontherocks.com/chaotic-progress-european-natos-quest-for-stronger-defense/",
     "https://warontherocks.com/chinas-farm-drones-a-trojan-horse-washington-overlooks/",
     "https://warontherocks.com/cogs-of-war/ai-agents-and-the-unseen-work-of-war/",
     "https://warontherocks.com/cogs-of-war/america-needs-an-off-ramp-between-doing-nothing-and-shutting-ai-down/",
