@@ -38,6 +38,7 @@
     "https://www.foreignaffairs.com/africa/can-renewables-industrialize-africa",
     "https://www.foreignaffairs.com/americas/trump-remaking-latin-america",
     "https://www.foreignaffairs.com/arctic-antarctic/dangerous-game-arctic",
+    "https://www.foreignaffairs.com/china/beijings-next-play-south-china-sea",
     "https://www.foreignaffairs.com/china/china-sabotaging-world-enables-its-rise",
     "https://www.foreignaffairs.com/china/chinas-moment-weakness",
     "https://www.foreignaffairs.com/china/coming-clash-between-china-and-europe",
@@ -70,11 +71,13 @@
     "https://www.foreignaffairs.com/united-kingdom/new-prime-minister-same-problem",
     "https://www.foreignaffairs.com/united-states/america-and-irans-strange-moment-opportunity",
     "https://www.foreignaffairs.com/united-states/america-still-has-upper-hand-over-china",
+    "https://www.foreignaffairs.com/united-states/americas-surprising-energy-advantage",
     "https://www.foreignaffairs.com/united-states/americas-trillion-dollar-failure-ro-khanna",
     "https://www.foreignaffairs.com/united-states/autocrats-worst-enemy",
     "https://www.foreignaffairs.com/united-states/better-way-build-ai",
     "https://www.foreignaffairs.com/united-states/broken-nuclear-umbrella-lind-press",
     "https://www.foreignaffairs.com/united-states/how-asia-learned-live-america-first",
+    "https://www.foreignaffairs.com/united-states/how-reindustrialize-america",
     "https://www.foreignaffairs.com/united-states/how-win-defense-innovation-contest",
     "https://www.foreignaffairs.com/united-states/iran-and-new-rules-global-power",
     "https://www.foreignaffairs.com/united-states/iran-and-new-rules-global-power-pape",
@@ -223,7 +226,16 @@
     "https://foreignpolicy.com/2026/07/27/netanyahu-trump-visit-israel-iran-war-elections-mamdani-united-nations/",
     "https://foreignpolicy.com/2026/07/27/russia-ukraine-war-money-spending-defense-budget-taxes-asset-confiscation-sanctions-finance/",
     "https://foreignpolicy.com/2026/07/27/trump-nuclear-saudi-arabia-deal-iran-israel/",
-    "https://foreignpolicy.com/2026/07/28/iran-war-economy-oil-sanctions-reconstruction/"
+    "https://foreignpolicy.com/2026/07/28/china-gene-editing-trial-scandal-death-child-biotech-ethics/",
+    "https://foreignpolicy.com/2026/07/28/el-nino-economy-agriculture-weather/",
+    "https://foreignpolicy.com/2026/07/28/iran-war-economy-oil-sanctions-reconstruction/",
+    "https://foreignpolicy.com/2026/07/28/netanyahu-israel-palestine-history-two-state-solution-gaza/",
+    "https://foreignpolicy.com/2026/07/28/trump-zelensky-netanyahu-white-house-russia-ukraine-patriots-iran-war-nuclear/",
+    "https://foreignpolicy.com/2026/07/28/united-nations-security-council-secretary-general-corruption-reform/",
+    "https://foreignpolicy.com/2026/07/28/united-states-iran-war-minab-accountabilitiy-war-crimes-foreign-policy-hegseth/",
+    "https://foreignpolicy.com/2026/07/28/washingtons-reset-serbia-mistake-vucic-autocracy/",
+    "https://foreignpolicy.com/2026/07/28/why-putin-will-escalate/",
+    "https://foreignpolicy.com/2026/07/29/asean-foreign-ministers-summit-manila-middle-east-war/"
   ],
   "Intelligence and National Security": [
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2016.1199528?af=R",
@@ -411,7 +423,8 @@
     "https://www.irregularwarfare.org/maritime-autonomous-systems-featuring-ukraines-sbu/",
     "https://www.irregularwarfare.org/ordinary-crime-hybrid-threat-or-irregular-warfare/",
     "https://www.irregularwarfare.org/protocol-insurgency-winning-the-war-of-conditions-in-the-digital-age/",
-    "https://www.irregularwarfare.org/the-wars-nuclear-weapons-dont-prevent/"
+    "https://www.irregularwarfare.org/the-wars-nuclear-weapons-dont-prevent/",
+    "https://www.irregularwarfare.org/thin-margins-strategic-effects-irregular-warfare-and-contested-logistics-in-the-arctic/"
   ],
   "Journal of Slavic Military Studies": [
     "https://www.tandfonline.com/doi/full/10.1080/13518046.2026.2666976?af=R",
@@ -472,6 +485,7 @@
     "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2671864?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2696225?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2698135?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2698656?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/01402390.2026.2698659?af=R"
   ],
   "Modern War Institute": [
@@ -492,7 +506,8 @@
     "https://mwi.westpoint.edu/the-bomber-paradox-the-b-21-nuclear-deterrence-and-the-risk-of-legacy-defense-assumptions/",
     "https://mwi.westpoint.edu/the-drone-revolution-that-isnt/",
     "https://mwi.westpoint.edu/trapped-combat-power-excess-equipment-and-the-armys-regeneration-problem/",
-    "https://mwi.westpoint.edu/urban-warfare-project-podcast-underground-warfare-reimagined/"
+    "https://mwi.westpoint.edu/urban-warfare-project-podcast-underground-warfare-reimagined/",
+    "https://mwi.westpoint.edu/when-lethality-isnt-enough-the-army-and-the-missing-element-of-combat-power/"
   ],
   "Naval War College Review": [
     "https://digital-commons.usnwc.edu/nwc-review/vol79/iss1/12",
@@ -808,10 +823,16 @@
     "https://smallwarsjournal.com/2026/07/27/sof-weekly-brief-july-27-2026/",
     "https://smallwarsjournal.com/2026/07/27/the-steel-triangle-the-future-of-a-shipbuilding-alliance-webinar-7-28-26/",
     "https://smallwarsjournal.com/2026/07/27/understanding-the-true-crime-community-tcc-youth-targeted-violence-and-weapons-iconography/",
+    "https://smallwarsjournal.com/2026/07/28/2026-virtual-defense-counterintelligence-security-agency-conference-september-14-18-2026/",
+    "https://smallwarsjournal.com/2026/07/28/7-28-26-national-security-and-korean-news-and-commentary/",
     "https://smallwarsjournal.com/2026/07/28/cognitive-warfare-below-the-threshold/",
     "https://smallwarsjournal.com/2026/07/28/how-the-trauma-of-1973-shaped-israels-2026-intelligence-failure/",
     "https://smallwarsjournal.com/2026/07/28/its-time-to-try-the-kleiman-strategy-in-mexico/",
-    "https://smallwarsjournal.com/2026/07/28/three-weeks-to-win/"
+    "https://smallwarsjournal.com/2026/07/28/three-weeks-to-win/",
+    "https://smallwarsjournal.com/2026/07/29/damn-fine-soldiers-resilience-brotherhood-and-the-fight-for-baghdad/",
+    "https://smallwarsjournal.com/2026/07/29/south-koreas-strategic-pivot-in-the-global-battle-for-digital-finance/",
+    "https://smallwarsjournal.com/2026/07/29/the-signals-before-the-storm-what-al-qaedas-public-behavior-can-tell-us-about-strategic-change/",
+    "https://smallwarsjournal.com/2026/07/29/ukraine-attacks-iranian-ship-in-the-caspian-nyt/"
   ],
   "Studies in Intelligence": [
     "https://www.cia.gov/resources/csi/studies-in-intelligence/studies-in-intelligence-vol-69-no-3-extracts-september-2025/applying-epistemology-to-analysis-making-the-case-for-abductive-reasoning/",
@@ -991,6 +1012,7 @@
     "https://warontherocks.com/chinas-farm-drones-a-trojan-horse-washington-overlooks/",
     "https://warontherocks.com/cogs-of-war/ai-agents-and-the-unseen-work-of-war/",
     "https://warontherocks.com/cogs-of-war/america-needs-an-off-ramp-between-doing-nothing-and-shutting-ai-down/",
+    "https://warontherocks.com/cogs-of-war/asmls-extreme-ultraviolet-lithography-and-the-limits-of-reverse-engineering-in-china/",
     "https://warontherocks.com/cogs-of-war/at-a-glance-american-quadcopter-component-manufacturing/",
     "https://warontherocks.com/cogs-of-war/before-q-day-the-race-to-quantum-first/",
     "https://warontherocks.com/cogs-of-war/chinas-ai-governance-offensive-threatens-u-s-tech-leadership/",
@@ -1046,6 +1068,7 @@
     "https://warontherocks.com/is-skepticism-ukraines-foreign-policy-playbook/",
     "https://warontherocks.com/is-there-a-place-in-ukrainian-media-for-war-skeptics/",
     "https://warontherocks.com/is-time-on-chinas-side-beijings-taiwan-calculus-and-the-balance-of-power/",
+    "https://warontherocks.com/key-areas-where-water-scarcity-intensifies-risks-of-conflict/",
     "https://warontherocks.com/leading-in-the-dark-how-submarine-commanders-think-under-uncertainty/",
     "https://warontherocks.com/learning-from-the-voyage-of-the-damned-the-making-of-a-russian-naval-disaster/",
     "https://warontherocks.com/lost-in-translation-how-a-premier-chinese-think-tank-views-u-s-chinese-competition/",
@@ -1059,6 +1082,7 @@
     "https://warontherocks.com/one-size-doesnt-fit-all-the-many-faces-of-africas-foreign-fighters/",
     "https://warontherocks.com/open-strait-unsettled-waters/",
     "https://warontherocks.com/outgunned-but-not-outplayed-irans-theory-of-victory/",
+    "https://warontherocks.com/parsing-trumps-decision-to-maybe-give-uranium-enrichment-to-saudi-arabia/",
     "https://warontherocks.com/rebuilding-american-manufacturing-a-keystone-for-economic-statecraft/",
     "https://warontherocks.com/revisiting-the-importance-of-the-battle-of-midway/",
     "https://warontherocks.com/sinews-of-war-at-sea-the-armed-services-need-a-common-watercraft-family/",
