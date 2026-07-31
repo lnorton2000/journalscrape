@@ -60,6 +60,7 @@
     "https://www.foreignaffairs.com/iran/iranian-vision-new-middle-east-zarif",
     "https://www.foreignaffairs.com/israel/how-save-us-israeli-alliance",
     "https://www.foreignaffairs.com/middle-east/new-old-middle-east",
+    "https://www.foreignaffairs.com/middle-east/new-old-middle-east-gause",
     "https://www.foreignaffairs.com/pakistan/pakistan-won-war-iran",
     "https://www.foreignaffairs.com/palestinian-territories/build-palestinian-state",
     "https://www.foreignaffairs.com/palestinian-territories/end-hamas",
@@ -70,7 +71,9 @@
     "https://www.foreignaffairs.com/somalia/who-winning-africas-drone-wars",
     "https://www.foreignaffairs.com/southeast-asia/can-private-sector-save-vietnam",
     "https://www.foreignaffairs.com/ukraine/how-save-irrelevance",
+    "https://www.foreignaffairs.com/ukraine/why-weaker-russia-keeps-fighting",
     "https://www.foreignaffairs.com/united-kingdom/new-prime-minister-same-problem",
+    "https://www.foreignaffairs.com/united-states/ambiguity-spiral-iran",
     "https://www.foreignaffairs.com/united-states/america-and-irans-strange-moment-opportunity",
     "https://www.foreignaffairs.com/united-states/america-still-has-upper-hand-over-china",
     "https://www.foreignaffairs.com/united-states/americas-surprising-energy-advantage",
@@ -247,8 +250,16 @@
     "https://foreignpolicy.com/2026/07/29/us-alliance-military-defense-industry-self-reliance/",
     "https://foreignpolicy.com/2026/07/29/us-saudi-arabia-strikes-iraq-militias-pmf-iran-war-houthis-yemen/",
     "https://foreignpolicy.com/2026/07/29/wildberries-russia-ukraine-war-drone-attacks-putin-military-supplies-logistics/",
+    "https://foreignpolicy.com/2026/07/30/cockroach-janta-party-modi-social-media-gen-z-india-instagram/",
+    "https://foreignpolicy.com/2026/07/30/daniel-yergin-iran-war-oil-market-prices-hormuz-united-states-china/",
+    "https://foreignpolicy.com/2026/07/30/iraq-iran-militias-zaidi-trump-isis-oil/",
+    "https://foreignpolicy.com/2026/07/30/lindsey-graham-russia-sanctions-bill-congress-ukraine/",
     "https://foreignpolicy.com/2026/07/30/middle-powers-iran-war-europe/",
-    "https://foreignpolicy.com/2026/07/30/openai-hack-genie-bottle-defense/"
+    "https://foreignpolicy.com/2026/07/30/openai-hack-genie-bottle-defense/",
+    "https://foreignpolicy.com/2026/07/30/poland-russia-missile-incursion-nato-ukraine-war-strikes/",
+    "https://foreignpolicy.com/2026/07/30/trump-sanctions-venezuela-iran-weakened/",
+    "https://foreignpolicy.com/2026/07/30/us-iran-war-iraq-strikes-saudi-houthis/",
+    "https://foreignpolicy.com/2026/07/31/germany-merz-spahn-scandal-conservative/"
   ],
   "Intelligence and National Security": [
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2016.1199528?af=R",
@@ -330,7 +341,8 @@
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2703595?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2705632?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2707843?af=R",
-    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2709206?af=R"
+    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2709206?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2710545?af=R"
   ],
   "International Journal of Intelligence and CounterIntelligence": [
     "https://www.tandfonline.com/doi/full/10.1080/08850607.2024.2442397?af=R",
@@ -419,6 +431,7 @@
     "https://www.irregularwarfare.org/disciplined-initiative-what-wwiis-commandos-teach-us-about-innovation-war-and-the-future-of-special-operations/",
     "https://www.irregularwarfare.org/economic-warfare-chinese-ai/",
     "https://www.irregularwarfare.org/five-years-after-the-withdrawal-insights-from-the-afghanistan-war-commission/",
+    "https://www.irregularwarfare.org/floating-liabilities-aircraft-carriers-in-the-age-of-precision-strike-and-irregular-warfare/",
     "https://www.irregularwarfare.org/from-nato-to-the-gulf-allies-access-and-the-hidden-architecture-of-american-power/",
     "https://www.irregularwarfare.org/geoeconomics-of-irregular-warfare-iran-and-the-global-ripple-effects-part-ix/",
     "https://www.irregularwarfare.org/geoeconomics-of-irregular-warfare-iran-and-the-global-ripple-effects-part-viii/",
@@ -852,10 +865,20 @@
     "https://smallwarsjournal.com/2026/07/29/south-koreas-strategic-pivot-in-the-global-battle-for-digital-finance/",
     "https://smallwarsjournal.com/2026/07/29/the-signals-before-the-storm-what-al-qaedas-public-behavior-can-tell-us-about-strategic-change/",
     "https://smallwarsjournal.com/2026/07/29/ukraine-attacks-iranian-ship-in-the-caspian-nyt/",
+    "https://smallwarsjournal.com/2026/07/30/7-30-26-national-security-and-korean-news-and-commentary/",
+    "https://smallwarsjournal.com/2026/07/30/cannibalism-as-a-policy-challenge/",
     "https://smallwarsjournal.com/2026/07/30/climate-conflict-and-strategic-competition-in-the-central-sahel/",
     "https://smallwarsjournal.com/2026/07/30/human-judgment-at-machine-speed/",
+    "https://smallwarsjournal.com/2026/07/30/swj-el-centro-book-review-comprendre-les-gangs-en-haiti-quartiers-securite-et-medias/",
     "https://smallwarsjournal.com/2026/07/30/the-iran-war-and-el-nino/",
-    "https://smallwarsjournal.com/2026/07/30/the-license-and-the-ledger-the-trump-zelensky-meeting-that-didnt-end-badly/"
+    "https://smallwarsjournal.com/2026/07/30/the-iran-war-is-expanding-washington-examiner-acled/",
+    "https://smallwarsjournal.com/2026/07/30/the-license-and-the-ledger-the-trump-zelensky-meeting-that-didnt-end-badly/",
+    "https://smallwarsjournal.com/2026/07/30/ukraine-winning-strategy-against-russia-attrition/",
+    "https://smallwarsjournal.com/2026/07/31/climate-migration-into-yemen-a-regional-security-threat/",
+    "https://smallwarsjournal.com/2026/07/31/staff-processes-in-large-scale-combat-operations-part-iv-targeting-as-part-of-combined-arms/",
+    "https://smallwarsjournal.com/2026/07/31/the-importance-of-revisiting-deterrence-in-the-space-domain/",
+    "https://smallwarsjournal.com/2026/07/31/why-britain-is-giving-ukraine-the-blueprints-not-just-the-weapons/",
+    "https://smallwarsjournal.com/2026/07/31/winning-the-war-for-the-narrative-against-china-about-taiwan/"
   ],
   "Studies in Intelligence": [
     "https://www.cia.gov/resources/csi/studies-in-intelligence/studies-in-intelligence-vol-69-no-3-extracts-september-2025/applying-epistemology-to-analysis-making-the-case-for-abductive-reasoning/",
@@ -937,7 +960,8 @@
     "https://www.tandfonline.com/doi/full/10.1080/00396338.2026.2704412?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/00396338.2026.2704413?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/00396338.2026.2704414?af=R",
-    "https://www.tandfonline.com/doi/full/10.1080/00396338.2026.2704416?af=R"
+    "https://www.tandfonline.com/doi/full/10.1080/00396338.2026.2704416?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/00396338.2026.2711553?af=R"
   ],
   "The China Quarterly": [
     "https://dx.doi.org/10.1017/S0305741025100842?rft_dat=source%3Ddrss",
