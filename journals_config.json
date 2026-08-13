@@ -58,15 +58,6 @@
       "notes": "Valid RSS, 21+ items, current pubDates."
     },
     {
-      "name": "Foreign Policy",
-      "publisher": "Graham Holdings / FP Group",
-      "feed_url": "https://foreignpolicy.com/feed/",
-      "status": "confirmed",
-      "scrape_url": null,
-      "scrape_viability": null,
-      "notes": "Standard WordPress RSS, ~28 items, current."
-    },
-    {
       "name": "International Security",
       "publisher": "MIT Press",
       "feed_url": null,
