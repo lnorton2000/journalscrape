@@ -277,12 +277,22 @@ def print_digest(new_by_journal):
             print(f"  - {title}\n    {link}")
 
 
+# If a single source reports more than this many *new* items in one run, treat
+# it as a malfunction (a broken feed now serving a full archive, or a scraper
+# whose page was redesigned so its pattern over-matches) rather than a real
+# burst -- no source legitimately publishes this many pieces in a day. Such a
+# source is dropped from the digest and flagged instead, so a mistake can never
+# flood the inbox with hundreds of "new" items at once.
+MAX_NEW_PER_SOURCE = 25
+
+
 def main():
     config = load_json(CONFIG_PATH, {"journals": []})
     state = load_json(STATE_PATH, {})
 
     new_by_journal = {}
     errors = []
+    floods = []
 
     for journal in config["journals"]:
         feed_url = journal.get("feed_url")
@@ -302,7 +312,12 @@ def main():
             continue
 
         new_items = [(title, link) for title, link in items if link not in seen_links]
-        if new_items:
+        if len(new_items) > MAX_NEW_PER_SOURCE:
+            # Almost certainly a broken source, not a real burst -- suppress the
+            # flood but still mark everything seen below, so it self-heals and
+            # doesn't re-trigger every day.
+            floods.append((name, len(new_items)))
+        elif new_items:
             new_by_journal[name] = new_items
 
         state[name] = sorted({link for _, link in items} | seen_links)
@@ -315,14 +330,27 @@ def main():
         for e in errors:
             print(f"  {e}", file=sys.stderr)
 
-    warning = None
+    warning_parts = []
+    if floods:
+        detail = "\n".join(
+            f"  - {name}: {count} new items in one run (limit {MAX_NEW_PER_SOURCE})"
+            for name, count in floods
+        )
+        warning_parts.append(
+            "NOTE: these sources returned an abnormal number of new items and "
+            "were left OUT of the digest below to avoid flooding your inbox -- "
+            "this usually means the feed or scraper broke, not that this many "
+            "articles were really published. They've been marked as seen so this "
+            "won't repeat; check the source(s):\n" + detail
+        )
     if not persisted:
-        warning = (
+        warning_parts.append(
             "WARNING: failed to save today's article state to git. This means "
             "today's new articles below (if any) will likely be re-sent as "
             "'new' again tomorrow, until this is fixed. Diagnostic output:\n\n"
             + persist_log
         )
+    warning = "\n\n".join(warning_parts) if warning_parts else None
 
     if new_by_journal or warning:
         send_digest_email(new_by_journal, warning=warning)
