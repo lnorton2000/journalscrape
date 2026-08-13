@@ -1,5 +1,14 @@
 {
   "CSIS": [
+    "https://www.csis.org/analysis/democracy-under-stress-and-transformation-global-order",
+    "https://www.csis.org/analysis/does-space-commerce-certification-create-or-reduce-red-tape",
+    "https://www.csis.org/analysis/government-lending-20-putting-price-policy-risk",
+    "https://www.csis.org/analysis/litigation-review",
+    "https://www.csis.org/analysis/new-approaches-address-role-gold-sudans-civil-war",
+    "https://www.csis.org/analysis/powering-innovation-data-centers-compute-and-us-competitiveness",
+    "https://www.csis.org/analysis/proving-ground-chinas-strategic-ratcheting-philippines-and-indo-pacifics-gray-zone-problem",
+    "https://www.csis.org/analysis/states-weekly-august-12-2026",
+    "https://www.csis.org/analysis/what-happens-if-congress-codifies-russia-sanctions",
     "https://www.csis.org/events/2016-us-japan-security-seminar",
     "https://www.csis.org/events/bio-pharma-industry-and-society",
     "https://www.csis.org/events/china-reality-check-chinas-internet-sovereignty-initiative-origins-and-consequences",
@@ -342,9 +351,13 @@
     "https://foreignpolicy.com/2026/08/11/trump-communism-state-capitalism-tariffs-semiconductor-chips/",
     "https://foreignpolicy.com/2026/08/11/trump-israel-west-bank-gaza-palestinians-settlers-hamas-netanyahu-election/",
     "https://foreignpolicy.com/2026/08/11/turkey-pakistan-saudi-arabia-mecca-pact-fp-live/",
+    "https://foreignpolicy.com/2026/08/12/china-uyghurs-families-camps-human-rights/",
     "https://foreignpolicy.com/2026/08/12/houthis-risking-everything-iran-naval-blockade/",
     "https://foreignpolicy.com/2026/08/12/lng-sanctions-russia-shadow-fleet-china/",
-    "https://foreignpolicy.com/2026/08/12/myanmar-junta-leader-thailand-asean/"
+    "https://foreignpolicy.com/2026/08/12/myanmar-junta-leader-thailand-asean/",
+    "https://foreignpolicy.com/2026/08/12/pakistan-mecca-pact-saudi-arabia-turkey-iran-mutual-defense/",
+    "https://foreignpolicy.com/2026/08/12/ukraine-russia-black-sea-strikes-north-korea-missiles-lebanon-death-penalty/",
+    "https://foreignpolicy.com/2026/08/12/zambia-elections-hichilema-economic-policy-us-china-copper-mines/"
   ],
   "Intelligence and National Security": [
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2016.1199528?af=R",
@@ -576,6 +589,7 @@
     "https://www.tandfonline.com/doi/full/10.1080/13518046.2026.2714477?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/13518046.2026.2714478?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/13518046.2026.2714481?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/13518046.2026.2714484?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/13518046.2026.2714485?af=R"
   ],
   "Journal of Strategic Competition": [
@@ -633,6 +647,7 @@
   "Modern War Institute": [
     "https://mwi.westpoint.edu/build-at-scale-innovate-at-the-edge-close-the-feedback-loop-fast-transforming-acquisition-for-the-drone-age/",
     "https://mwi.westpoint.edu/deceive-or-die-revitalizing-military-deception-for-large-scale-combat-operations/",
+    "https://mwi.westpoint.edu/digging-below-the-death-zone-the-underground-war-in-ukraine/",
     "https://mwi.westpoint.edu/five-plays-to-seize-time-and-deter-war-in-the-western-pacific/",
     "https://mwi.westpoint.edu/five-questions-for-a-general-brigadier-general-sean-crockett/",
     "https://mwi.westpoint.edu/five-questions-for-a-general-major-general-james-bartholomees/",
@@ -1057,9 +1072,13 @@
     "https://smallwarsjournal.com/2026/08/11/power-maximization-in-the-indo-pacific-chinas-maritime-assertiveness-in-the-south-china-sea/",
     "https://smallwarsjournal.com/2026/08/11/the-math-behind-cartel-recruitment-in-mexico/",
     "https://smallwarsjournal.com/2026/08/11/the-war-of-the-pen-what-americas-state-department-is-ignoring/",
+    "https://smallwarsjournal.com/2026/08/12/8-12-26-national-security-and-korean-news-and-commentary/",
     "https://smallwarsjournal.com/2026/08/12/bing-wests-cat-5-the-2033-war-review/",
     "https://smallwarsjournal.com/2026/08/12/countervalue-reimagined/",
-    "https://smallwarsjournal.com/2026/08/12/stealth-aircraft/"
+    "https://smallwarsjournal.com/2026/08/12/from-subversion-to-resistance-lessons-from-russias-war-in-ukraine/",
+    "https://smallwarsjournal.com/2026/08/12/south-africa-a-new-node-in-the-global-illicit-drug-system-orion-policy-institute/",
+    "https://smallwarsjournal.com/2026/08/12/stealth-aircraft/",
+    "https://smallwarsjournal.com/2026/08/12/webinar-examines-pattons-successes-flaws/"
   ],
   "Studies in Intelligence": [
     "https://www.cia.gov/resources/csi/studies-in-intelligence/studies-in-intelligence-vol-69-no-3-extracts-september-2025/applying-epistemology-to-analysis-making-the-case-for-abductive-reasoning/",
@@ -1369,6 +1388,7 @@
     "https://warontherocks.com/putting-armageddon-on-autopilot-how-artificial-intelligence-could-make-nuclear-threats-more-effective/",
     "https://warontherocks.com/rebuilding-american-manufacturing-a-keystone-for-economic-statecraft/",
     "https://warontherocks.com/revisiting-the-importance-of-the-battle-of-midway/",
+    "https://warontherocks.com/russias-blurry-line-between-science-and-sabotage-beneath-the-oceans-surface/",
     "https://warontherocks.com/sinews-of-war-at-sea-the-armed-services-need-a-common-watercraft-family/",
     "https://warontherocks.com/somali-pirates-are-back-but-the-coalition-that-beat-them-isnt-coming/",
     "https://warontherocks.com/south-korea-could-build-nuclear-submarines-but-it-shouldnt/",
