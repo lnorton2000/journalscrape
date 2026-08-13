@@ -106,8 +106,41 @@ def scrape_cia_studies_in_intelligence(index_url):
     return items
 
 
+def scrape_csis_analysis(listing_url):
+    """Return (title, link) tuples for the current pieces on CSIS's analysis listing.
+
+    CSIS is a large site that publishes many content types -- commentary,
+    briefs, reports, "critical questions", weekly columns -- but they all get a
+    /analysis/<slug> URL and surface together on the /analysis listing page.
+    The site's advertised RSS feed (csis.org/rss.xml) is dead (it returns a
+    handful of 2016 events), so we scrape the listing instead.
+
+    Each item appears as <a href="/analysis/<slug>">Title</a>; we capture the
+    anchor text as the title, stripping any nested markup. Only the most recent
+    ~9 items are shown and pagination (?page=N) is WAF-blocked (403), but the
+    daily cadence means a handful of items per day is captured comfortably.
+    """
+    html = fetch_html(listing_url)
+    pattern = re.compile(r'<a[^>]+href="(/analysis/[^"?#]+)"[^>]*>(.*?)</a>', re.S)
+
+    items = []
+    seen_links = set()
+    for href, inner in pattern.findall(html):
+        title = re.sub(r"<[^>]+>", " ", inner)  # strip nested tags (spans, etc.)
+        title = re.sub(r"\s+", " ", title).strip()
+        if len(title) <= 15:  # skip icon/"read more" links with no real title
+            continue
+        link = urljoin(listing_url, href)
+        if link in seen_links:
+            continue
+        seen_links.add(link)
+        items.append((title, link))
+    return items
+
+
 SCRAPERS = {
     "cia_studies_in_intelligence": scrape_cia_studies_in_intelligence,
+    "csis_analysis": scrape_csis_analysis,
 }
 
 

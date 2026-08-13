@@ -14,11 +14,12 @@
     {
       "name": "CSIS",
       "publisher": "Center for Strategic and International Studies",
-      "feed_url": "https://www.csis.org/rss.xml",
+      "feed_url": null,
       "status": "confirmed",
-      "scrape_url": null,
-      "scrape_viability": null,
-      "notes": "Confirmed working; note this is CSIS's site-wide feed (all publications/commentary), not a single narrow journal."
+      "scrape_url": "https://www.csis.org/analysis",
+      "scrape_type": "csis_analysis",
+      "scrape_viability": "easy",
+      "notes": "The advertised site-wide RSS (csis.org/rss.xml) is dead -- it returns ~10 events from 2016. CSIS publishes many content types (commentary, briefs, reports, critical questions, weekly columns) but they all surface on the /analysis listing under /analysis/<slug> URLs, so we scrape that listing instead (see poll_journals.py: scrape_csis_analysis). Only the ~9 most-recent items show and ?page=N pagination is WAF-blocked, but the daily poll cadence captures the handful published per day."
     },
     {
       "name": "War on the Rocks",
