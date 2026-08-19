@@ -12,6 +12,15 @@
       "notes": "Standard WordPress RSS."
     },
     {
+      "name": "Providence",
+      "publisher": "Institute on Religion and Democracy",
+      "feed_url": "https://providencemag.com/feed/",
+      "status": "confirmed",
+      "scrape_url": null,
+      "scrape_viability": null,
+      "notes": "Standard WordPress RSS; ~10 items, current pubDates. A journal of Christianity & American foreign policy."
+    },
+    {
       "name": "CSIS",
       "publisher": "Center for Strategic and International Studies",
       "feed_url": null,
