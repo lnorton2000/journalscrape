@@ -1,6 +1,7 @@
 {
   "CSIS": [
     "https://www.csis.org/analysis/1926-slavery-conventions-centennial-context",
+    "https://www.csis.org/analysis/2027-congress-and-dangerous-data-breach-pileup",
     "https://www.csis.org/analysis/25-years-after-anthrax-attacks-reauthorize-and-modernize-pahpa-better-protect-americans",
     "https://www.csis.org/analysis/25-years-anthrax-attacks-where-are-we-now",
     "https://www.csis.org/analysis/adapting-new-terrorism-landscape-25-years-after-911",
@@ -14,6 +15,7 @@
     "https://www.csis.org/analysis/ant-and-grasshopper-revised-version",
     "https://www.csis.org/analysis/archipelago-and-umbrella-harmonizing-french-and-nato-nuclear-deterrence",
     "https://www.csis.org/analysis/are-sbir-mills-truly-problem",
+    "https://www.csis.org/analysis/are-united-states-and-its-allies-learning-quickly-enough-war-ukraine",
     "https://www.csis.org/analysis/art-swarming",
     "https://www.csis.org/analysis/assessing-impact-china-russia-economic-coordination-latin-america-and-caribbean",
     "https://www.csis.org/analysis/assessing-nigerias-efforts-protect-christians-and-secure-middle-belt",
@@ -58,6 +60,7 @@
     "https://www.csis.org/analysis/eu-china-relations-face-existential-test-escalation-not-inevitable",
     "https://www.csis.org/analysis/europe-force-posture-review-and-transition-nato-30",
     "https://www.csis.org/analysis/european-front-commercial-data-exploitation",
+    "https://www.csis.org/analysis/european-nations-state-their-vision-future-european-security",
     "https://www.csis.org/analysis/expect-more-dangerous-asia-if-maritime-issues-dont-make-trump-xi-agenda",
     "https://www.csis.org/analysis/fast-following-military-emulation-and-twenty-first-century-transformation",
     "https://www.csis.org/analysis/fcc-covered-list-national-security-economic-policy-and-technology-supply-chains",
@@ -90,6 +93,7 @@
     "https://www.csis.org/analysis/iran-and-emerging-security-order-middle-east",
     "https://www.csis.org/analysis/iran-war-six-months-energy-markets-and-national-security",
     "https://www.csis.org/analysis/kims-second-byungjin-21-years-after-six-party-talks-agreement",
+    "https://www.csis.org/analysis/largest-crypto-heist-history-could-have-been-avoided",
     "https://www.csis.org/analysis/last-week-meatballs-week-spaghetti",
     "https://www.csis.org/analysis/learning-without-bleeding-chinas-lessons-russia-ukraine-drone-war",
     "https://www.csis.org/analysis/lebanons-imperiled-transition-need-urgent-reset",
@@ -627,7 +631,10 @@
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2744947?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2751046?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2752533?af=R",
-    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2757655?af=R"
+    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2754235?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2757655?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2762293?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/02684527.2026.2762294?af=R"
   ],
   "International Journal of Intelligence and CounterIntelligence": [
     "https://www.tandfonline.com/doi/full/10.1080/08850607.2024.2442397?af=R",
@@ -1418,7 +1425,8 @@
     "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2747229?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2757817?af=R",
     "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2757821?af=R",
-    "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2761380?af=R"
+    "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2761380?af=R",
+    "https://www.tandfonline.com/doi/full/10.1080/09592318.2026.2761383?af=R"
   ],
   "Small Wars Journal": [
     "https://smallwarsjournal.com/2026/07/03/7-3-26-national-security-and-korean-news-and-commentary/",
@@ -1950,6 +1958,9 @@
     "https://smallwarsjournal.com/2026/11/12/secretary-of-war-pete-hegseth-elevates-special-operations-leadership-to-revitalize-the-legacy-of-the-office-of-strategic-services/",
     "https://smallwarsjournal.com/2026/11/12/the-drone-contact-force-a-cornerstone-for-the-future-army/",
     "https://smallwarsjournal.com/2026/11/12/who-speaks-for-uw/",
+    "https://smallwarsjournal.com/2026/11/13/11-13-26-national-security-and-korean-news-and-commentary/",
+    "https://smallwarsjournal.com/2026/11/13/asd-so-lic-reorganized-as-office-of-strategic-services/",
+    "https://smallwarsjournal.com/2026/11/13/philosophy-at-war-wittgenstein-and-irregular-warfare/",
     "https://smallwarsjournal.com/2026/11/13/the-infrastructure-of-dependence/",
     "https://smallwarsjournal.com/2026/11/13/the-strait-that-could-break-the-pacific/"
   ],
